@@ -17,4 +17,4 @@ jobs:
           git pull
           npm i
           pm2 stop plane-game
-          pm2 start --nameplane-game index.js
+          pm2 start --name plane-game index.js

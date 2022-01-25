@@ -13,7 +13,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         script: |
-          cd plane-game
+          cd plane-game-built
           git pull
           npm i
           pm2 stop plane-game

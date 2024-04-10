@@ -10,7 +10,11 @@ app.listen(PORT, () => {
 
 
 app.use("/", express.static(__dirname + "/build"));
-app.get("/", (req, res) => res.sendFile(path.join(__dirname, "/index.html")));
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "/index.html"));
+});
 
 app.use("/ai", express.static(__dirname + "/aibuild"));
-app.get("/ai", (req, res) => res.sendFile(path.join(__dirname, "/index.html")));
+app.get("/ai", function(req, res) {
+  res.sendFile(path.join(__dirname, "/index.html"))
+});
